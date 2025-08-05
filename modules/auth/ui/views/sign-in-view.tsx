@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { z } from "zod";
@@ -21,7 +22,7 @@ import { useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const formSchema = z.object({
-  email: z.email(),
+  email: z.string().email(),
   password: z.string().min(1, { message: "Password is required" }),
 });
 
